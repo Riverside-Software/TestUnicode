@@ -1,0 +1,32 @@
+ADD TABLE "MyTable"
+  AREA "Schema Area"
+  DUMP-NAME "MyTable"
+
+ADD FIELD "Field1" OF "MyTable" AS character
+  DESCRIPTION "中国的"
+  FORMAT "x(20)"
+  INITIAL "0"
+  LABEL "字段标签"
+  COLUMN-LABEL "列标签"
+  ORDER 10
+
+ADD FIELD "Field2" OF "MyTable" AS character
+  DESCRIPTION "Num2 中国的"
+  FORMAT "x(20)"
+  INITIAL "0"
+  LABEL "Num2 字段标签"
+  COLUMN-LABEL "Num2 列标签"
+  ORDER 20
+
+ADD INDEX "MyTablePK" ON "MyTable" 
+  AREA "Schema Area"
+  UNIQUE
+  PRIMARY
+  INDEX-FIELD "Field1" ASCENDING 
+  INDEX-FIELD "Field2" ASCENDING 
+
+.
+PSC
+cpstream=utf-8
+.
+0000000000

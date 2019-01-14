@@ -1,0 +1,32 @@
+ADD TABLE "MyTable"
+  AREA "Schema Area"
+  DUMP-NAME "MyTable"
+
+ADD FIELD "Field1" OF "MyTable" AS character
+  DESCRIPTION "ぁあぃいぅ"
+  FORMAT "x(20)"
+  INITIAL "0"
+  LABEL "日本語の文字"
+  COLUMN-LABEL "日本語の文字"
+  ORDER 10
+
+ADD FIELD "Field2" OF "MyTable" AS character
+  DESCRIPTION "日本語Field 2 の文字"
+  FORMAT "x(20)"
+  INITIAL "0"
+  LABEL "日Field2本語の文字"
+  COLUMN-LABEL "日本語の文Field2字"
+  ORDER 20
+
+ADD INDEX "MyTablePK" ON "MyTable" 
+  AREA "Schema Area"
+  UNIQUE
+  PRIMARY
+  INDEX-FIELD "Field1" ASCENDING 
+  INDEX-FIELD "Field2" ASCENDING 
+
+.
+PSC
+cpstream=utf-8
+.
+0000000000

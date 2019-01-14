@@ -1,0 +1,32 @@
+ADD TABLE "MyTable"
+  AREA "Schema Area"
+  DUMP-NAME "MyTable"
+
+ADD FIELD "Field1" OF "MyTable" AS character
+  DESCRIPTION "Descrïption"
+  FORMAT "x(20)"
+  INITIAL "0"
+  LABEL "Làbèl"
+  COLUMN-LABEL "Label çolônne"
+  ORDER 10
+
+ADD FIELD "Field2" OF "MyTable" AS character
+  DESCRIPTION "Num2 Descrïption"
+  FORMAT "x(20)"
+  INITIAL "0"
+  LABEL "Num2 Làbèl"
+  COLUMN-LABEL "Num2 Label çolônne"
+  ORDER 20
+
+ADD INDEX "MyTablePK" ON "MyTable" 
+  AREA "Schema Area"
+  UNIQUE
+  PRIMARY
+  INDEX-FIELD "Field1" ASCENDING 
+  INDEX-FIELD "Field2" ASCENDING 
+
+.
+PSC
+cpstream=utf-8
+.
+0000000000
